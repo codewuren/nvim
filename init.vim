@@ -37,4 +37,9 @@ set scrolloff=5
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
+
+""" coc confiuration
+let g:coc_global_extensions = ['coc-explorer']
+nmap tt <Cmd>CocCommand explorer<CR>
