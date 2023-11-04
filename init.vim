@@ -19,8 +19,8 @@ if empty(glob('~/.config/nvim/plugged/'))
 endif
 
 syntax on
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set ai
 set number
@@ -28,10 +28,8 @@ set hlsearch
 set ruler
 highlight Comment ctermfg=green
 set list
-set listchars=tab:\┆\ ,trail:-
 hi CursorLine ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 set viewoptions=cursor,folds,slash,unix
-set relativenumber
 set autoindent
 set scrolloff=5
 
