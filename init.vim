@@ -37,7 +37,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 """ coc confiuration
-let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-ccls']
+let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-ccls', 'coc-rls']
 
 nmap tt <Cmd>CocCommand explorer<CR>
 " Use tab for trigger completion with characters ahead and navigate
