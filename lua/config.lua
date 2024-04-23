@@ -1,5 +1,6 @@
 -- Visual
 vim.o.showtabline        = 1                            -- Always show tabline
+vim.o.syntax             = 1
 vim.o.termguicolors      = true                         -- Use true colors, required for some plugins
 vim.wo.number            = true
 vim.wo.relativenumber    = true

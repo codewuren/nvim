@@ -60,7 +60,7 @@ return require('packer').startup(function(use)
   use "rafamadriz/friendly-snippets"
 
   -- Theme
-  use {'Mofiqul/dracula.nvim', config = function () require('plugins.themes') end}
+  use {'folke/tokyonight.nvim', config = function () require('plugins.themes') end}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

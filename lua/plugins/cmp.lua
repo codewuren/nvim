@@ -2,6 +2,9 @@
 local cmp = require'cmp'
 
 cmp.setup({
+  completion = {
+    completeopt = 'menu,menuone,noinsert'
+  },
   snippet = {
     -- REQUIRED - you must specify a snippet engine
     expand = function(args)
@@ -13,7 +16,10 @@ cmp.setup({
     end,
   },
   window = {
-    completion = cmp.config.window.bordered(),
+    completion = {
+      border = "rounded",
+      winhighlight = "Normal:None,FloatBorder:None,CursorLine:Visual",
+    },
     documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
