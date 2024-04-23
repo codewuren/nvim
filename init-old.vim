@@ -38,7 +38,7 @@ Plug 'mhinz/vim-startify'
 call plug#end()
 
 """ coc confiuration
-let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-ccls', 'coc-rls']
+let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-ccls', 'coc-rls', 'coc-pyright']
 
 nmap tt <Cmd>CocCommand explorer<CR>
 " Use tab for trigger completion with characters ahead and navigate
