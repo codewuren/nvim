@@ -28,4 +28,3 @@ vim.diagnostic.config {
   signs = true,          -- Keep gutter signs
 }
 
-
