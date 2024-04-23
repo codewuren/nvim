@@ -14,6 +14,9 @@ local function nvim_tree_attach(bufnr)
 
   -- custom mappings
   vim.keymap.set('n', '<C-f>', api.tree.change_root_to_parent,        opts('Up'))
+  vim.keymap.set('n', '<CR>',    api.node.open.edit,                  opts('Open'))
+  vim.keymap.set('n', '<BS>',    api.node.navigate.parent_close,      opts('Close Directory'))
+  vim.keymap.set('n', '<Tab>',   api.node.open.preview,               opts('Open Preview'))
   vim.keymap.set('n', 'q',       api.tree.close,                      opts('Close'))
   vim.keymap.set('n', 'r',       api.fs.rename,                       opts('Rename'))
   vim.keymap.set('n', 'o',       api.node.open.edit,                  opts('Open'))
