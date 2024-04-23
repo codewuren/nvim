@@ -59,6 +59,9 @@ return require('packer').startup(function(use)
   use {"L3MON4D3/LuaSnip", config = function() require('plugins.snippets') end}
   use "rafamadriz/friendly-snippets"
 
+  -- Theme
+  use {'Mofiqul/dracula.nvim', config = function () require('plugins.themes') end}
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
