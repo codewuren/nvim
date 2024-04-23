@@ -28,7 +28,4 @@ vim.diagnostic.config {
   signs = true,          -- Keep gutter signs
 }
 
--- Starting Lualine
-require('lualine').setup {
-  options = { theme = 'dracula' }
-}
+

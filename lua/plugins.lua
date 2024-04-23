@@ -28,8 +28,36 @@ return require('packer').startup(function(use)
   -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    config = function() require('plugins.lualine') end,
   }
+
+  -- Mason.nvim
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig"
+  }
+
+  require("plugins.lspconfig")
+
+  -- Autocomplete
+  use({
+    "hrsh7th/nvim-cmp",
+    -- Sources for nvim-cmp
+    requires = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-cmdline",
+      "saadparwaiz1/cmp_luasnip",
+    },
+    config = function() require('plugins.cmp') end,
+  })
+
+  -- Snippets
+  use {"L3MON4D3/LuaSnip", config = function() require('plugins.snippets') end}
+  use "rafamadriz/friendly-snippets"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
