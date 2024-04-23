@@ -59,8 +59,11 @@ return require('packer').startup(function(use)
   use {"L3MON4D3/LuaSnip", config = function() require('plugins.snippets') end}
   use "rafamadriz/friendly-snippets"
 
-  -- Theme
+  -- Themes
   use {'folke/tokyonight.nvim', config = function () require('plugins.themes') end}
+
+  -- Startify
+  use {'mhinz/vim-startify'}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
