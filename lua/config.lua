@@ -22,10 +22,3 @@ local pynvim_env        = os.getenv("HOME").."/.local/bin/pyenv/versions/pynvim/
 vim.g.python3_host_prog = pynvim_env.."/bin/python"
 vim.g.black_virtualenv  = pynvim_env
 
--- Disable inline error messages
-vim.diagnostic.config {
-  virtual_text = false,
-  underline = false,
-  signs = true,          -- Keep gutter signs
-}
-

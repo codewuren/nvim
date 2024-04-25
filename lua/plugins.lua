@@ -31,14 +31,13 @@ return require('packer').startup(function(use)
     config = function() require('plugins.lualine') end,
   }
 
-  -- Mason.nvim
+  -- lspconfig
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig"
+    "neovim/nvim-lspconfig",
   }
-
-  require("plugins.lspconfig")
+  require('plugins.lspconfig')
 
   -- Autocomplete
   use({
@@ -48,6 +47,7 @@ return require('packer').startup(function(use)
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
+      "f3fora/cmp-spell",
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-cmdline",
       "saadparwaiz1/cmp_luasnip",
@@ -57,7 +57,6 @@ return require('packer').startup(function(use)
 
   -- Snippets
   use {"L3MON4D3/LuaSnip", config = function() require('plugins.snippets') end}
-  use "rafamadriz/friendly-snippets"
 
   -- Themes
   use ({
