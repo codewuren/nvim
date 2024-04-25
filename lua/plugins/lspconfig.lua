@@ -21,7 +21,7 @@ vim.o.updatetime = 50
 vim.diagnostic.config({
   signs = true,
   underline = true,
-  update_in_insert = false,
+  update_in_insert = true,
   severity_sort = false,
 })
 
@@ -32,12 +32,10 @@ vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
   end
 })
 
-
 require("mason-lspconfig").setup_handlers({
   function (server_name)
     require("lspconfig")[server_name].setup{}
   end,
-  -- Next, you can provide targeted overrides for specific servers.
   ["lua_ls"] = function ()
     lspconfig.lua_ls.setup {
       settings = {
