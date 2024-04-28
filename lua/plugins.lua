@@ -31,14 +31,6 @@ return require('packer').startup(function(use)
     config = function() require('plugins.lualine') end,
   }
 
-  -- lspconfig
-  use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-  }
-  require('plugins.lspconfig')
-
   -- Autocomplete
   use({
     "hrsh7th/nvim-cmp",
@@ -58,6 +50,16 @@ return require('packer').startup(function(use)
   -- Snippets
   use {"L3MON4D3/LuaSnip", config = function() require('plugins.snippets') end}
 
+  -- lspconfig
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    config = function ()
+      require('plugins.lspconfig')
+    end
+  }
+
   -- Themes
   use ({
     'folke/tokyonight.nvim',
@@ -76,6 +78,14 @@ return require('packer').startup(function(use)
     },
     config = function ()
       require('plugins.nvim-tree')
+    end
+  })
+
+  -- Nvim-highlight-colors
+  use ({
+    'brenoprata10/nvim-highlight-colors',
+    config = function ()
+      require('plugins.color-highlight')
     end
   })
 
