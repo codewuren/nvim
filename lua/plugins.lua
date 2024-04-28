@@ -55,10 +55,8 @@ return require('packer').startup(function(use)
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
-    config = function ()
-      require('plugins.lspconfig')
-    end
   }
+  require('plugins.lspconfig')
 
   -- Themes
   use ({
